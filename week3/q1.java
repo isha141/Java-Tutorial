@@ -10,24 +10,24 @@ import java.util.Scanner;
 import java.text.DecimalFormat;
 import java.math.BigDecimal;
 abstract class shape{
-    public void rectangleArea(int l,int b){}; 
-    public void squarearae(int s){};
-    public void circularea(double r){};
+    abstract void rectangleArea(int l,int b); 
+    abstract void squareArea(int s);
+    abstract void circularArea(double r);
 } 
 class Area extends shape{
-    public void rectangleArea(int l,int b)
+    void rectangleArea(int l,int b)
     { 
         double area;
         area=l*b;
         System.out.println("Area of the rectangle is " + area);
     }
-    public void squareArea(int s)
+     void squareArea(int s)
     { 
         double area;
         area=s*s;
         System.out.println("Area of the square is " + area);
     }  
-    public void circulareArea(double r)
+     void circularArea(double r)
     { 
         double area;
         area=Math.PI*r*r;
@@ -39,7 +39,7 @@ public class task3_q1 {
     {
         Area obj=new Area();
         obj.rectangleArea(10, 20);
-        obj.circulareArea(5);
+        obj.circularArea(5);
         obj.squareArea(4);
     }
         
